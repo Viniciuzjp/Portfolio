@@ -1,26 +1,64 @@
 @import "tailwindcss";
+html {
+  font-size: 16px;
+}
+body {
+  font-family: var(--font-jetbrains);
+}
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+
+  --av-primary-color: #242424;
+  --av-secondary-color: #f5f5f5;
+
+
+  --av-primary-text-color: #f5f5f5;
+  --av-secondary-text-color: #242424;
+  --av-font-family: 'Roboto', sans-serif;
+  --av-font-bold: bold;
+
+  --av-lines: '#686868';
+
+
+  --av-font-size-xs: 12px;
+  --av-font-size-sm: 14px;
+  --av-font-size-md: 16px;
+  --av-font-size-lg: 18px;
+  --av-font-size-xl: 20px;
+
+  --av-font-family: '--font-jetbrains'; 
+
+  --av-spinner-width-sm: 48px;
+  --av-spinner-width-md: 64px;
+  --av-spinner-width-lg: 80px;
+
+
+  --av-spacing-xs: 4px;
+  --av-spacing-sm: 8px;
+  --av-spacing-md: 12px;
+  --av-spacing-lg: 16px;
+  --av-spacing-xl: 20px;
+
+  --av-space-xs: 0.25rem; /* 4px */
+  --av-space-sm: 0.5rem; /* 8px */
+  --av-space-md: 0.75rem; /* 12px */
+  --av-space-lg: 2rem; /* 16px */
+  --av-space-xl: 5.25rem; /* 20px */
+
+  --av-text-xs: 0.75rem; /* 12px */
+  --av-text-sm: 0.875rem; /* 14px */
+  --av-text-md: 1rem; /* 16px */
+  --av-text-lg: 1.125rem; /* 18px */
+  --av-text-xl: 1.25rem; /* 20px */
+
+  --av-weight-light: 300;
+  --av-weight-normal: 400;
+  --av-weight-medium: 500;
+  --av-weight-bold: 700;
+
+  --av-grid-cols-1: 1;
+  --av-grid-cols-2: 2;
+  --av-grid-cols-3: 3;
+  --av-grid-cols-4: 4;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}
