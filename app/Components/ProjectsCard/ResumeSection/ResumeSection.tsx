@@ -76,9 +76,9 @@ export const ResumeSection = () => {
       </Grid>
       <div className="w-full h-px bg-neutral-900" />
       <Flex gap="md">
-        <Text variant="description">2 templates</Text>
-        <Text variant="description">PDF export</Text>
-        <Text variant="description">free customizabe</Text>
+        <Text variant="description">2 modelos</Text>
+        <Text variant="description">PDF exportação</Text>
+        <Text variant="description">costomização gratuita</Text>
       </Flex>
     </Flex>
   );

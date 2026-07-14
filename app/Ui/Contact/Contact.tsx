@@ -2,9 +2,9 @@ import { Flex, Grid, Section, Stack } from "@av-digital/components";
 import { Text } from "@/app/Components/Text/Text";
 import { Button } from "@/app/Components/Button/Button";
 import Link from "next/link";
-import {
-  SiGmail,
-} from "react-icons/si";
+import { SiGmail } from "react-icons/si";
+import MailtoLink from "@/app/Components/MailtoLink/MailtoLink";
+import ContactForm from "@/app/Components/ContactForm/ContactForm";
 const ContactLinks = [
   {
     id: 1,
@@ -28,14 +28,15 @@ export const Contact = () => {
       <Grid gap="lg">
         <Stack>
           <Text variant="labelJet">// CONTATO</Text>
-          <Text variant="title">Available for senior roles</Text>
+          <Text variant="title">Vamos trabalhar juntos</Text>
           <Flex>
-            <Button>
-              <Flex>
-                <SiGmail color="black" size={40} />
-                <Text variant="labelJet">viniciusjuarez720@gmail.com</Text>
-              </Flex>
-            </Button>
+            <ContactForm/>
+            <MailtoLink
+              email={"viniciusjuarez2022@hotmail.com"}
+              subject={"Titulo"}
+              body={"Uma descrição para meu email"}
+            >
+            </MailtoLink>
           </Flex>
         </Stack>
         <Stack>
