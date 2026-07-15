@@ -2,7 +2,7 @@ import { Container, Flex } from "@av-digital/components";
 import { Text } from "@/app/Components/Text/Text";
 import Link from "next/link";
 import { Button } from "@/app/Components/Button/Button";
-import { Colors } from "@/app/design-system/Tokens/Colors";
+
 
 
 const NavLinks = [
@@ -24,7 +24,7 @@ const NavLinks = [
     href: "#Projects",
     variant: "label",
   },
-];
+] as const;
 
 export default function Header() {
   return (
