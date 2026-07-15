@@ -67,45 +67,62 @@ const CardInfo = [
 export default function Projects() {
   return (
     <>
-      <Section>
-        <Flex align="start">
-          <Text variant="labelJet">// PROJETOS</Text>
-          {CardInfo.map((item) => (
-            <div key={item.id} className="w-full">
-              <ProjectsCard>
-                <Flex className="w-full" justify="between">
-                  <Text variant="labelJet">{item.info.title}</Text>
-                  <Flex>
-                    <Text variant="labelJet">{item.info.date}</Text>
-                    <Badge>
-                      <Text variant="labelJet">{item.info.status}</Text>
-                    </Badge>
-                  </Flex>
+<Section>
+  <Flex align="start">
+    <Text variant="labelJet">// PROJETOS</Text>
+
+    {CardInfo.map((item) => (
+      <div key={item.id} className="w-full">
+        <ProjectsCard>
+          <Flex className="w-full" justify="between">
+            <Text variant="labelJet">{item.info.title}</Text>
+
+            <Flex>
+              <Text variant="labelJet">{item.info.date}</Text>
+
+              <Badge>
+                <Text variant="labelJet">{item.info.status}</Text>
+              </Badge>
+            </Flex>
+          </Flex>
+
+          <Text variant="h1" className="mb-10">
+            {item.title}
+          </Text>
+
+          <div className="flex flex-col-reverse lg:flex-row gap-10 items-start">
+            <div className="flex-1 w-full">
+              <Stack gap="lg">
+                <Text variant="label">{item.desciption}</Text>
+
+                <Stack gap="sm">
+                  <Text variant="labelJet">{item.labels.id1}</Text>
+                  <Text variant="labelJet">{item.labels.id2}</Text>
+                  <Text variant="labelJet">{item.labels.id3}</Text>
+                  <Text variant="labelJet">{item.labels.id4}</Text>
+                </Stack>
+
+                <Flex>
+                  <Button>
+                    <Text variant="label">Ver Demo</Text>
+                  </Button>
+
+                  <Button>
+                    <Text variant="label">Ver Repositório</Text>
+                  </Button>
                 </Flex>
-                <Text variant="h1" className="mb-10">
-                  {item.title}
-                </Text>
-                <Grid>
-                  <Stack gap="lg">
-                    <Text variant="label">{item.desciption}</Text>
-                    <Stack gap="sm">
-                      <Text variant="labelJet">{item.labels.id1}</Text>
-                      <Text variant="labelJet">{item.labels.id2}</Text>
-                      <Text variant="labelJet">{item.labels.id3}</Text>
-                      <Text variant="labelJet">{item.labels.id4}</Text>
-                    </Stack>
-                    <Flex>
-                      <Button><Text variant="label">Ver Demo</Text></Button>
-                      <Button><Text variant="label">Ver Repositório</Text></Button>
-                    </Flex>
-                  </Stack>
-                  {item.component}
-                </Grid>
-              </ProjectsCard>
+              </Stack>
             </div>
-          ))}
-        </Flex>
-      </Section>
+
+            <div className="flex-1 w-full">
+              {item.component}
+            </div>
+          </div>
+        </ProjectsCard>
+      </div>
+    ))}
+  </Flex>
+</Section>
     </>
   );
 }

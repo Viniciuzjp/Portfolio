@@ -43,7 +43,7 @@ export const Hero = () => {
           pointerEvents: "none",
         }}
       />
-      <main className="flex w-full gap-10">
+      <main className="flex flex-col lg:flex-row w-full gap-10">
         <section className="w-full">
           <Flex>
             <Dot></Dot>
@@ -52,13 +52,13 @@ export const Hero = () => {
           <Stack gap="lg">
             <Text variant="title">VINICIUS JUAREZ</Text>
             <Text variant="label">
-              Desenvolvedor Front-End focado na criação de interfaces modernas,
-              escaláveis e de alta performance com React, Next.js e TypeScript.
-              Atualmente desenvolvo uma biblioteca de componentes para
-              padronizar interfaces e acelerar o desenvolvimento de aplicações.
-              Tenho experiência em transformar ideias em produtos intuitivos,
-              priorizando arquitetura, reutilização de código, performance e uma
-              excelente experiência do usuário.
+              Desenvolvedor Front-End especializado em React, Next.js e
+              TypeScript, focado na construção de aplicações escaláveis e na
+              resolução de problemas por meio de soluções técnicas bem
+              estruturadas. Busco desenvolver código limpo, tipado e
+              reutilizável, aplicando boas práticas de arquitetura, integração
+              com APIs, otimizações de performance, SEO e experiências
+              consistentes para usuários e equipes de desenvolvimento.
             </Text>
             <Flex className="w-6/10">
               {Stacks.map((item) => (

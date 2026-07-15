@@ -53,19 +53,18 @@ export const About = () => {
   return (
     <>
       <Section spacing="lg">
-        <div className="flex w-full gap-15">
+        <div className="flex flex-col md:flex-row w-full gap-15">
           <Stack classname="mb-35 h-5 w-full space-y-4">
             <Text variant="labelJet">// Sobre Mim</Text>
             <Text variant="h1">COMO TRABALHO</Text>
             <Text variant="label">
-              Acredito que boas aplicações começam por uma arquitetura sólida.
-              Meu trabalho é construir interfaces que vão além da camada visual,
-              priorizando escalabilidade, reutilização de código, tipagem
-              consistente e decisões técnicas que simplifiquem a evolução do
-              produto. Tenho interesse especial em ecossistemas Front-End,
-              Design Systems, Component Libraries, otimização de performance e
-              ferramentas que aumentem a produtividade das equipes de
-              desenvolvimento.
+              Acredito que boas aplicações são construídas a partir de decisões
+              técnicas consistentes. Meu foco é desenvolver soluções escaláveis
+              utilizando arquitetura modular, tipagem forte, integração com
+              APIs, separação de responsabilidades e componentes reutilizáveis.
+              Tenho interesse em performance, SEO, experiência do desenvolvedor
+              (DX) e ferramentas que tornam aplicações mais fáceis de evoluir e
+              manter.
             </Text>
           </Stack>
           <Stack>
