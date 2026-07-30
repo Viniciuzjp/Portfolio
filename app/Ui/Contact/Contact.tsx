@@ -25,7 +25,7 @@ const ContactLinks = [
 export const Contact = () => {
   return (
     <Section>
-      <Grid gap="lg">
+      <Grid responsive classname="grid-cols-1 md:grid-cols-2" gap="lg">
         <Stack>
           <Text variant="labelJet">// CONTATO</Text>
           <Text variant="title">Vamos trabalhar juntos</Text>

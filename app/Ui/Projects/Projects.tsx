@@ -6,6 +6,7 @@ import { LibSection } from "@/app/Components/ProjectsCard/LibSection/LibSection"
 import { EcommerceSection } from "@/app/Components/ProjectsCard/EcommerceSection/Ecommerce";
 import { ResumeSection } from "@/app/Components/ProjectsCard/ResumeSection/ResumeSection";
 import { Button } from "@/app/Components/Button/Button";
+import Link from "next/link";
 
 const CardInfo = [
   {
@@ -22,6 +23,10 @@ const CardInfo = [
       id1: "Nx monorepo arquitetura",
       id2: "Integração com Design token",
       id4: "Versionamento Semantico",
+    },
+    links: {
+      demo: "https://github.com/Viniciuzjp/AVDigital_components.git",
+      repo: "https://github.com/Viniciuzjp/AVDigital_components.git",
     },
     component: <LibSection />,
   },
@@ -42,6 +47,10 @@ const CardInfo = [
       id3: "Ecossistema de compras",
       id4: "Monitoramento do processo de compras",
     },
+    links: {
+      demo: "https://web-hygg.vercel.app/",
+      repo: "https://github.com/Viniciuzjp/WebShopcase.git",
+    },
     component: <EcommerceSection />,
   },
 
@@ -60,6 +69,10 @@ const CardInfo = [
       id2: "exportação em PDF",
       id4: "Personalização de cores, tamanhos, fontes entre outros",
     },
+    links: {
+      demo: "https://cv-maker-ashy-phi.vercel.app/",
+      repo: "https://github.com/Viniciuzjp/CV_Maker.git",
+    },
     component: <ResumeSection />,
   },
 ];
@@ -67,62 +80,63 @@ const CardInfo = [
 export default function Projects() {
   return (
     <>
-<Section>
-  <Flex align="start">
-    <Text variant="labelJet">// PROJETOS</Text>
+      <Section>
+        <Flex align="start">
+          <Text variant="labelJet">// PROJETOS</Text>
 
-    {CardInfo.map((item) => (
-      <div key={item.id} className="w-full">
-        <ProjectsCard>
-          <Flex className="w-full" justify="between">
-            <Text variant="labelJet">{item.info.title}</Text>
+          {CardInfo.map((item) => (
+            <div key={item.id} className="w-full">
+              <ProjectsCard>
+                <Flex className="w-full" justify="between">
+                  <Text variant="labelJet">{item.info.title}</Text>
 
-            <Flex>
-              <Text variant="labelJet">{item.info.date}</Text>
+                  <Flex>
+                    <Text variant="labelJet">{item.info.date}</Text>
 
-              <Badge>
-                <Text variant="labelJet">{item.info.status}</Text>
-              </Badge>
-            </Flex>
-          </Flex>
-
-          <Text variant="h1" className="mb-10">
-            {item.title}
-          </Text>
-
-          <div className="flex flex-col-reverse lg:flex-row gap-10 items-start">
-            <div className="flex-1 w-full">
-              <Stack gap="lg">
-                <Text variant="label">{item.desciption}</Text>
-
-                <Stack gap="sm">
-                  <Text variant="labelJet">{item.labels.id1}</Text>
-                  <Text variant="labelJet">{item.labels.id2}</Text>
-                  <Text variant="labelJet">{item.labels.id3}</Text>
-                  <Text variant="labelJet">{item.labels.id4}</Text>
-                </Stack>
-
-                <Flex>
-                  <Button>
-                    <Text variant="label">Ver Demo</Text>
-                  </Button>
-
-                  <Button>
-                    <Text variant="label">Ver Repositório</Text>
-                  </Button>
+                    <Badge>
+                      <Text variant="labelJet">{item.info.status}</Text>
+                    </Badge>
+                  </Flex>
                 </Flex>
-              </Stack>
-            </div>
 
-            <div className="flex-1 w-full">
-              {item.component}
+                <Text variant="h1" className="mb-10">
+                  {item.title}
+                </Text>
+
+                <div className="flex flex-col-reverse lg:flex-row gap-10 items-start">
+                  <div className="flex-1 w-full">
+                    <Stack gap="lg">
+                      <Text variant="label">{item.desciption}</Text>
+
+                      <Stack gap="sm">
+                        <Text variant="labelJet">{item.labels.id1}</Text>
+                        <Text variant="labelJet">{item.labels.id2}</Text>
+                        <Text variant="labelJet">{item.labels.id3}</Text>
+                        <Text variant="labelJet">{item.labels.id4}</Text>
+                      </Stack>
+
+                      <Flex>
+                        <Link href={item.links.demo}>
+                          <Button>
+                            <Text variant="label">Ver Demo</Text>
+                          </Button>
+                        </Link>
+                        <Link href={item.links.repo}>
+                          <Button>
+                            <Text variant="label">Ver Repositório</Text>
+                          </Button>
+                        </Link>
+                      </Flex>
+                    </Stack>
+                  </div>
+
+                  <div className="flex-1 w-full">{item.component}</div>
+                </div>
+              </ProjectsCard>
             </div>
-          </div>
-        </ProjectsCard>
-      </div>
-    ))}
-  </Flex>
-</Section>
+          ))}
+        </Flex>
+      </Section>
     </>
   );
 }

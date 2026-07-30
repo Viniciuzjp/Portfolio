@@ -18,7 +18,7 @@ const List = [
       "Defino tokens, componentes e padrões visuais para garantir interfaces consistentes e uma experiência uniforme.",
     value: "02",
     type: "UI",
-    margin: "mr-10 ml-5",
+    margin: "md:mr-10 md:ml-5",
   },
   {
     id: 3,
@@ -27,7 +27,7 @@ const List = [
       "Separação em componentes desacoplados, configuráveis e reutilizáveis, priorizando consistência e redução de código duplicado.",
     value: "03",
     type: "TEMPLATE",
-    margin: "mr-15 ml-10",
+    margin: "md:mr-15 md:ml-10",
   },
   {
     id: 4,
@@ -36,7 +36,7 @@ const List = [
       "Aplico técnicas de otimização como lazy loading, renderização eficiente, divisão de código e estratégias voltadas para SEO.",
     value: "01",
     type: "UX",
-    margin: "mr-20 ml-15",
+    margin: "md:mr-20 md:ml-15",
   },
   {
     id: 5,
@@ -45,7 +45,7 @@ const List = [
       "Estruturo aplicações para serem escaláveis, previsíveis e fáceis de evoluir, equilibrando legibilidade, reutilização, performance e simplicidade por meio de decisões técnicas fundamentadas, tendo como base Clean Code, princípios SOLID, Mobile First e decisões técnicas baseadas em trade-offs.",
     value: "05",
     type: "UX",
-    margin: "mr-25 ml-20",
+    margin: "md:mr-25 md:ml-20",
   },
 ];
 
@@ -54,7 +54,7 @@ export const About = () => {
     <>
       <Section spacing="lg">
         <div className="flex flex-col md:flex-row w-full gap-15">
-          <Stack classname="mb-35 h-5 w-full space-y-4">
+          <Stack classname="mb-55 h-5 w-full space-y-4">
             <Text variant="labelJet">// Sobre Mim</Text>
             <Text variant="h1">COMO TRABALHO</Text>
             <Text variant="label">
