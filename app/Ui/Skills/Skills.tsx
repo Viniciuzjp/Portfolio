@@ -40,7 +40,7 @@ export default function Skills() {
           }}
         />
 
-        <Grid gap="xl">
+        <Grid gap="lg">
           <Flex className="w-full" align="start" direction="column">
             <Text variant="labelJet">// Front End</Text>
             <div className="w-full h-px bg-neutral-900" />
