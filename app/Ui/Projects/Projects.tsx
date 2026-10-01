@@ -1,4 +1,4 @@
-import { Flex, Grid, Section, Stack } from "@av-digital/components";
+import { Flex, Section, Stack } from "@av-digital/components";
 import { Text } from "@/app/Components/Text/Text";
 import { ProjectsCard } from "@/app/Components/ProjectsCard/ProjectsCard";
 import { Badge } from "@/app/Components/Badge/Badge";
@@ -12,20 +12,21 @@ const CardInfo = [
   {
     id: 1,
     info: {
-      title: "01 Biblioteca de Componentes · NPM Pacote",
+      title: "01 Biblioteca de Componentes · Pacote NPM",
       date: "2024",
       status: "Publicada",
     },
     title: "Lib @av-digital/components",
     desciption:
-      "Biblioteca de componentes React desenvolvida com foco em reutilização, consistência e escalabilidade. O projeto reúne componentes totalmente tipados, variantes configuráveis e uma arquitetura modular, servindo como base para acelerar o desenvolvimento e padronizar interfaces entre diferentes aplicações.",
+      "Biblioteca de componentes React publicada no NPM. Estruturei o monorepo, os tokens de design e o fluxo de versionamento. Está na versão 0.3.9 e é a base de UI deste portfólio.",
     labels: {
-      id1: "Nx monorepo arquitetura",
-      id2: "Integração com Design token",
-      id4: "Versionamento Semantico",
+      id1: "12 componentes tipados com variantes configuráveis",
+      id2: "Monorepo Nx",
+      id3: "Tokens de design compartilhados entre componentes",
+      id4: "Versionamento semântico (v0.3.9)",
     },
     links: {
-      demo: "https://github.com/Viniciuzjp/AVDigital_components.git",
+      demo: "https://av-webdigital.website/",
       repo: "https://github.com/Viniciuzjp/AVDigital_components.git",
     },
     component: <LibSection />,
@@ -34,21 +35,21 @@ const CardInfo = [
   {
     id: 2,
     info: {
-      title: "02 E-commerce via Dropshipping · Next.js",
+      title: "02 E-commerce · Next.js + Shopify",
       date: "2025",
       status: "Produção",
     },
-    title: "E-commerce Hygg",
+    title: "E-commerce Touge",
     desciption:
-      "E-commerce desenvolvido com foco em arquitetura Front-End, integrando Shopify e APIs externas para gerenciamento de produtos. O projeto demonstra separação de responsabilidades, componentização, persistência de dados, padrões reutilizáveis de UI e otimizações voltadas para escalabilidade, performance e manutenção.",
+      "Loja de dropshipping no ar em tougeclub.store. Desenvolvi o front-end inteiro: catálogo de produtos via Shopify Storefront API, carrinho e fluxo de compra até o pagamento.",
     labels: {
-      id1: "Persistência de dados via LocalStorage",
-      id2: "Testes de pagamentos",
-      id3: "Ecossistema de compras",
-      id4: "Monitoramento do processo de compras",
+      id1: "Integração com Shopify Storefront API",
+      id2: "Carrinho persistido com Context API + LocalStorage",
+      id3: "Fluxo de pagamento testado de ponta a ponta",
+      id4: "Monitoramento das etapas de compra",
     },
     links: {
-      demo: "https://web-hygg.vercel.app/",
+      demo: "https://tougeclub.store",
       repo: "https://github.com/Viniciuzjp/WebShopcase.git",
     },
     component: <EcommerceSection />,
@@ -57,17 +58,18 @@ const CardInfo = [
   {
     id: 3,
     info: {
-      title: "03 Desenvolvedor de Curriculos Personalizados · SheetSty",
+      title: "03 Gerador de Currículos · Next.js",
       date: "2024",
       status: "Produção",
     },
     title: "SheetSty",
     desciption:
-      "Plataforma para criação de currículos personalizados, permitindo que usuários montem documentos profissionais por meio de uma interface dinâmica e altamente configurável. O projeto foi desenvolvido com foco em experiência do usuário, reutilização de componentes, renderização otimizada e uma arquitetura preparada para suportar múltiplos templates e futuras expansões.",
+      "Editor de currículos com pré-visualização em tempo real e 5 templates. Todos os templates leem os mesmos dados de um contexto compartilhado, então um modelo novo entra sem alterar o editor.",
     labels: {
-      id1: "Variantes de 1 - 2 colunas",
-      id2: "exportação em PDF",
-      id4: "Personalização de cores, tamanhos, fontes entre outros",
+      id1: "5 templates com layouts diferentes",
+      id2: "Exportação em PDF no formato A4",
+      id3: "Rascunho salvo entre sessões (Context API + LocalStorage)",
+      id4: "Cores, fontes e tamanhos ajustáveis",
     },
     links: {
       demo: "https://cv-maker-ashy-phi.vercel.app/",
@@ -81,8 +83,9 @@ export default function Projects() {
   return (
     <>
       <Section>
+        <div id="Projects">
         <Flex align="start">
-          <Text variant="labelJet">// PROJETOS</Text>
+          <Text variant="labelJet">{"// PROJETOS PRINCIPAIS"}</Text>
 
           {CardInfo.map((item) => (
             <div key={item.id} className="w-full">
@@ -118,12 +121,12 @@ export default function Projects() {
                       <Flex>
                         <Link href={item.links.demo}>
                           <Button>
-                            <Text variant="label">Ver Demo</Text>
+                            <Text variant="label">Ver projeto</Text>
                           </Button>
                         </Link>
                         <Link href={item.links.repo}>
                           <Button>
-                            <Text variant="label">Ver Repositório</Text>
+                            <Text variant="label">Ver código</Text>
                           </Button>
                         </Link>
                       </Flex>
@@ -136,6 +139,7 @@ export default function Projects() {
             </div>
           ))}
         </Flex>
+        </div>
       </Section>
     </>
   );

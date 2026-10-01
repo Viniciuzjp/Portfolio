@@ -7,7 +7,7 @@ export function EcosystemDiagram() {
       w: 198,
       h: 56,
       label: "Lib Componentes",
-      sublabel: "+ 12 components · NPM",
+      sublabel: "12 componentes · NPM",
       highlight: true,
     },
     {
@@ -36,7 +36,7 @@ export function EcosystemDiagram() {
       y: 248,
       w: 162,
       h: 52,
-      label: "Ferramentas",
+      label: "Aplicações",
       sublabel: "Next.js · React SPA",
       highlight: false,
     },
@@ -47,7 +47,7 @@ export function EcosystemDiagram() {
       w: 198,
       h: 56,
       label: "Projetos",
-      sublabel: "Escala & Performance",
+      sublabel: "E-commerce · SheetSty",
       highlight: false,
     },
   ];

@@ -3,7 +3,6 @@ import { Text } from "@/app/Components/Text/Text";
 import { Button } from "@/app/Components/Button/Button";
 import Link from "next/link";
 import { SiGmail } from "react-icons/si";
-import MailtoLink from "@/app/Components/MailtoLink/MailtoLink";
 import ContactForm from "@/app/Components/ContactForm/ContactForm";
 const ContactLinks = [
   {
@@ -25,22 +24,21 @@ const ContactLinks = [
 export const Contact = () => {
   return (
     <Section>
+      <div id="Contacts">
       <Grid responsive classname="grid-cols-1 md:grid-cols-2" gap="lg">
         <Stack>
-          <Text variant="labelJet">// CONTATO</Text>
-          <Text variant="title">Vamos trabalhar juntos</Text>
+          <Text variant="labelJet">{"// CONTATO"}</Text>
+          <Text variant="title">Vamos conversar</Text>
+          <Text variant="label">
+            Estou aberto a vagas de Desenvolvedor Front-End. Mande uma mensagem
+            pelo formulário ou fale comigo direto no LinkedIn.
+          </Text>
           <Flex>
             <ContactForm/>
-            <MailtoLink
-              email={"viniciusjuarez2022@hotmail.com"}
-              subject={"Titulo"}
-              body={"Uma descrição para meu email"}
-            >
-            </MailtoLink>
           </Flex>
         </Stack>
         <Stack>
-          <Text variant="labelJet">// ONDE ENCONTRAR</Text>
+          <Text variant="labelJet">{"// ONDE ENCONTRAR"}</Text>
           <Flex className="w-full">
             {ContactLinks.map((link) => (
               <div className="w-full" key={link.id}>
@@ -58,6 +56,7 @@ export const Contact = () => {
           </Flex>
         </Stack>
       </Grid>
+      </div>
     </Section>
   );
 };

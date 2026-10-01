@@ -8,27 +8,33 @@ import { Button } from "@/app/Components/Button/Button";
 const NavLinks = [
   {
     id: 1,
-    label: "Início",
-    href: "#Hero",
-    variant: "label",
-  },
-  {
-    id: 2,
     label: "Sobre",
     href: "#About",
     variant: "label",
   },
   {
-    id: 3,
+    id: 2,
     label: "Projetos",
     href: "#Projects",
+    variant: "label",
+  },
+  {
+    id: 3,
+    label: "Habilidades",
+    href: "#Skills",
+    variant: "label",
+  },
+  {
+    id: 4,
+    label: "Contato",
+    href: "#Contacts",
     variant: "label",
   },
 ] as const;
 
 export default function Header() {
   return (
-    <nav className="sticky top-0 p-3 border-b border-[rgba(255,255,255,0.06)]">
+    <nav className="sticky top-0 p-3 z-100 border-b border-[rgba(255,255,255,0.06)]">
       <Container size="xl">
         <Flex justify="between" align="center">
           <div>
@@ -47,9 +53,6 @@ export default function Header() {
                 <Text variant={item.variant}>{item.label}</Text>
               </Link>
             ))}
-            <Button>
-                <Text variant="label">Avaliable</Text>
-            </Button>
             </Flex>
           </div>
         </Flex>

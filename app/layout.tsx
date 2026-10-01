@@ -1,6 +1,13 @@
 import "./globals.css";
 import "@av-digital/components/styles"
 import { Onest, JetBrains_Mono } from 'next/font/google';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Vinicius Juarez · Desenvolvedor Front-End',
+  description:
+    'Desenvolvedor Front-End com React, Next.js e TypeScript. Biblioteca de componentes no NPM, e-commerce em produção e gerador de currículos.',
+};
 
 const onest = Onest({ 
   subsets: ['latin'],
@@ -21,7 +28,7 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="en"
+      lang="pt-BR"
       className={`${onest.variable} ${jetbrainsMono.variable}`}
     >
       <body className={onest.className}>{children}</body>

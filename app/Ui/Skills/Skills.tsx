@@ -19,6 +19,7 @@ const filteredToolsIcons = techStack.filter(
 export default function Skills() {
   return (
     <Section>
+      <div id="Skills">
       <section
         id="approach"
         style={{
@@ -42,7 +43,7 @@ export default function Skills() {
 
         <Grid gap="lg">
           <Flex className="w-full" align="start" direction="column">
-            <Text variant="labelJet">// Front End</Text>
+            <Text variant="labelJet">{"// Front End"}</Text>
             <div className="w-full h-px bg-neutral-900" />
             <Flex>
               {filteredFrontIcons.map((icon, index) => (
@@ -56,7 +57,7 @@ export default function Skills() {
           </Flex>
 
           <Flex className="w-full" align="start" direction="column">
-            <Text variant="labelJet">// Versionamento</Text>
+            <Text variant="labelJet">{"// Versionamento"}</Text>
             <div className="w-full h-px bg-neutral-900" />
             <Flex>
               {filteredVersIcons.map((icon, index) => (
@@ -70,7 +71,7 @@ export default function Skills() {
           </Flex>
 
           <Flex className="w-full" align="start" direction="column">
-            <Text variant="labelJet">// Backend</Text>
+            <Text variant="labelJet">{"// Backend"}</Text>
             <div className="w-full h-px bg-neutral-900" />
             <Flex>
               {filteredBacktIcons.map((icon, index) => (
@@ -84,7 +85,7 @@ export default function Skills() {
           </Flex>
 
           <Flex className="w-full" align="start" direction="column">
-            <Text variant="labelJet">// UI</Text>
+            <Text variant="labelJet">{"// UI"}</Text>
             <div className="w-full h-px bg-neutral-900" />
             <Flex>
               {filteredUitIcons.map((icon, index) => (
@@ -98,7 +99,7 @@ export default function Skills() {
           </Flex>
 
           <Flex className="w-full" align="start" direction="column">
-            <Text variant="labelJet">// Ferramentas</Text>
+            <Text variant="labelJet">{"// Ferramentas"}</Text>
             <div className="w-full h-px bg-neutral-900" />
             <Flex>
               {filteredToolsIcons.map((icon, index) => (
@@ -112,6 +113,7 @@ export default function Skills() {
           </Flex>
         </Grid>
       </section>
+      </div>
     </Section>
   );
 }

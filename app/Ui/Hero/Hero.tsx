@@ -21,11 +21,7 @@ const Stacks = [
     id: 3,
     tool: "Next.js",
   },
-  {
-    id: 4,
-    tool: "Nx",
-  },
-  { id: 5, tool: "NPM" },
+  { id: 4, tool: "NPM" },
 ];
 
 export const Hero = () => {
@@ -52,13 +48,10 @@ export const Hero = () => {
           <Stack gap="lg">
             <Text variant="title">VINICIUS JUAREZ</Text>
             <Text variant="label">
-              Desenvolvedor Front-End especializado em React, Next.js e
-              TypeScript, focado na construção de aplicações escaláveis e na
-              resolução de problemas por meio de soluções técnicas bem
-              estruturadas. Busco desenvolver código limpo, tipado e
-              reutilizável, aplicando boas práticas de arquitetura, integração
-              com APIs, otimizações de performance, SEO e experiências
-              consistentes para usuários e equipes de desenvolvimento.
+              Desenvolvedor Front-End com React, Next.js e TypeScript. Criei e
+              publiquei no NPM a biblioteca de componentes que sustenta este
+              site, e coloquei em produção um e-commerce integrado à Shopify e
+              um gerador de currículos com exportação em PDF.
             </Text>
             <Flex className="w-6/10">
               {Stacks.map((item) => (

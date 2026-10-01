@@ -23,8 +23,8 @@ const Items = [
   },
   {
     id: 4,
-    name: "<Dropdown />",
-    variants: ["Primary", "Secondary", "Sizes"],
+    name: "<Input />",
+    variants: ["Primary", "Secondary", "Ghost", "Sizes"],
     status: "stable",
   },
   {
@@ -60,7 +60,7 @@ export const LibSection = () => {
           ))}
           <Text variant="description">components/index.ts</Text>
         </Flex>
-        <Text variant="labelJet">v3.8.0</Text>
+        <Text variant="labelJet">v0.3.9</Text>
       </Flex>
       <Flex className="w-full pb-2">
         {Items.map((item) => (

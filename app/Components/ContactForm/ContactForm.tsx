@@ -4,10 +4,10 @@ import MailtoLink from "../MailtoLink/MailtoLink";
 import { SiGmail } from "react-icons/si";
 import { Flex } from "@av-digital/components";
 
+const CONTACT_EMAIL = "viniciusjuarez720@gmail.com";
 
 export default function ContactForm() {
   const [form, setForm] = useState({
-    email: "",
     subject: "",
     body: "",
   });
@@ -26,19 +26,9 @@ export default function ContactForm() {
   return (
     <form className="mx-auto flex w-full max-w-2xl flex-col gap-5">
   <input
-    type="email"
-    name="email"
-    placeholder="Email"
-    value={form.email}
-    onChange={handleChange}
-    required
-    className="h-12 rounded-xl border border-zinc-800 bg-transparent px-4 text-sm text-zinc-100 placeholder:text-zinc-500 outline-none transition-all duration-200 focus:border-zinc-400"
-  />
-
-  <input
     type="text"
     name="subject"
-    placeholder="Tema"
+    placeholder="Assunto"
     value={form.subject}
     onChange={handleChange}
     required
@@ -47,7 +37,7 @@ export default function ContactForm() {
 
   <textarea
     name="body"
-    placeholder="Insira o corpo de email..."
+    placeholder="Mensagem"
     rows={7}
     value={form.body}
     onChange={handleChange}
@@ -56,7 +46,7 @@ export default function ContactForm() {
   />
 
   <MailtoLink
-    email={form.email}
+    email={CONTACT_EMAIL}
     subject={form.subject}
     body={form.body}
     className="inline-flex h-11 w-fit items-center justify-center rounded-xl bg-white px-5 text-sm font-medium text-black transition hover:opacity-90"
